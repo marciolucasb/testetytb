@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Transmissão ao vivo</title>
+</head>
+<body>
+  <video id="video" width="640" height="480" controls></video>
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script>
+    var video = document.getElementById("video");
+
+    // Carrega o vídeo do YouTube
+    var ytPlayer = new YT.Player(video, {
+      height: 480,
+      width: 640,
+      videoId: "ATx1y6OD2MY",
+      events: {
+        onReady: function() {
+          // Inicia a reprodução do vídeo
+          ytPlayer.play();
+        },
+      },
+    });
+  </script>
+</body>
+</html>
